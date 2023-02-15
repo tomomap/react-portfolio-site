@@ -124,6 +124,27 @@ h3 {
   margin: 0 48px;
 }
 
+.figure-container {
+  display: flex;
+  justify-content: center;
+}
+.figure-container-item {
+  flex: 1;
+  min-width: 25%;
+}
+.progress-bar {
+  background-color: #bbb;
+  height: 50%;
+  width: 100%;
+  border-radius: 20px
+}
+
+.progress-bar-done {
+  background-color: #1e90ff;
+  height: 100%;
+  border-radius: 20px
+}
+
 /* Contact
  --------------- */
 #contact {
@@ -140,7 +161,7 @@ h3 {
   text-align: center;
 }
 
-.discription {
+.description {
   font-size: 16px;
 }
 

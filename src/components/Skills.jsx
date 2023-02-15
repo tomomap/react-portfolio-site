@@ -1,4 +1,3 @@
-import Circle from 'react-circle';
 import { requestStates } from '../constants';
 import { useSkills } from '../customHooks/useSkills';
 
@@ -21,12 +20,11 @@ export const Skills = () => {
           {
             fetchRequestState === requestStates.success && (
               sortedLanguageList().map((item, index) => (
-                <div className="skill-item" key={index}>
-                  <p className="description"><strong>{item.language}</strong></p>
-                  <Circle
-                  animate
-                  progress={converseCountToPercentage(item.count)}
-                  />
+                <div className="figure-container-item" key={index}>
+                  <p className="description"><strong>{item.language}&nbsp;...{converseCountToPercentage(item.count)}%</strong></p>
+                  <div className="progress-bar">
+                    <div className="progress-bar-done" style={{ width: `${converseCountToPercentage(item.count)}%` }}></div>
+                  </div>
                 </div>
               ))
             )
